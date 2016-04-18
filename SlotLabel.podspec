@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
     drop-in replacement.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SlotLabel"
+  s.homepage         = "https://github.com/pinnrepo/SlotLabel"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "David Westerhoff" => "dmwesterhoff@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SlotLabel.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/pinnrepo/SlotLabel.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
