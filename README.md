@@ -110,7 +110,7 @@ Got a great idea and want to contribute? Here's how you can help...
 ### History
 -----------
 
-For complete release notes check out the [Changelog](#changelog)
+For complete release notes check out the [changelog](https://github.com/pinnrepo/SlotLabel/blob/master/CHANGELOG.md)
 
 ### Roadmap
 -----------
