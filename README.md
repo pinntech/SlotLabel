@@ -7,7 +7,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/DWRandom)
 
-Slot label description...
+SlotLabel is an animated variant of a UILabel that is heavily inspired by
+casino slots. It was designed as a drop-in replacement for a UILabel. The 
+interface provides customization properties and animation methods. Animating
+the label to a string is a simple one liner, and can be customized to fit
+your apps style.
 
 ### Table of Contents
 ---------------------
@@ -39,7 +43,7 @@ Slot label description...
 SlotLabel is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```
+```ruby
 pod "SlotLabel"
 ```
 
