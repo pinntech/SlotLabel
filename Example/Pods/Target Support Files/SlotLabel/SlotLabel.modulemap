@@ -1,0 +1,6 @@
+framework module SlotLabel {
+  umbrella header "SlotLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,14 @@
+PODS:
+  - SlotLabel (0.1.0)
+
+DEPENDENCIES:
+  - SlotLabel (from `../`)
+
+EXTERNAL SOURCES:
+  SlotLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SlotLabel: e6d534f8fca383e976c97e186b1c6052737eef1b
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,25 @@
+{
+  "name": "SlotLabel",
+  "version": "0.1.0",
+  "summary": "A short description of SlotLabel.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SlotLabel",
+  "license": "MIT",
+  "authors": {
+    "David Westerhoff": "dmwesterhoff@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SlotLabel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "SlotLabel": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
