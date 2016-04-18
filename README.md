@@ -1,10 +1,10 @@
 # SlotLabel
 
-[![Version](https://img.shields.io/cocoapods/v/DWRandom.svg?style=flat)](http://cocoapods.org/pods/DWRandom)
-[![CI Status](https://travis-ci.org/dmwesterhoff/DWRandom.svg?branch=master)](https://travis-ci.org/David Westerhoff/DWRandom)
-[![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/DWRandom.svg?style=flat)](http://cocoapods.org/pods/DWRandom)
-[![License](https://img.shields.io/cocoapods/l/DWRandom.svg?style=flat)](http://cocoapods.org/pods/DWRandom)
-[![Platform](https://img.shields.io/cocoapods/p/DWRandom.svg?style=flat)](http://cocoapods.org/pods/DWRandom)
+[![Version](https://img.shields.io/cocoapods/v/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
+[![CI Status](https://travis-ci.org/dmwesterhoff/SlotLabel.svg?branch=master)](https://travis-ci.org/pinnrepo/SlotLabel)
+[![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
+[![License](https://img.shields.io/cocoapods/l/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
+[![Platform](https://img.shields.io/cocoapods/p/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/DWRandom)
 
 Slot label description...
