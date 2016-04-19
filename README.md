@@ -18,6 +18,7 @@ your apps style.
 
 * [Features](#features)
 * [Installation](#installation)
+* [Interface](#interface)
 * [Usage](#usage)
 * [Example](#example)
 * [Documentation](#documentation)
@@ -65,6 +66,41 @@ then simply add the files to your project, and use a local import header
 
 ```objc
 #import "SlotLabel.h"
+```
+
+### Interface
+-------------
+
+Heres a quick run down of all configurable properties and methods
+
+#### SlotCharacter
+------------------
+
+###### Properties
+```objc
+```
+
+###### Methods
+```objc
+- (void)animateToCharacter:(unsigned char)character;
+- (void)animateToCharacter:(unsigned char)character
+                completion:(void (^)(void))completion;
+- (void)animateToCharacter:(unsigned char)character
+                  duration:(CGFloat)duration
+                completion:(void (^)(void))completion;
+- (void)setToCharacter:(unsigned char)character;
+- (BOOL)isAnimating;
+```
+
+#### SlotLabel
+--------------
+
+###### Properties
+```objc
+```
+
+###### Methods
+```objc
 ```
 
 ### Usage

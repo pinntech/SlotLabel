@@ -116,15 +116,11 @@
                   duration:(CGFloat)duration
                 completion:(void (^)(void))completion
 {
+    self.value = character;
     NSString* string = [NSString stringWithFormat:@"%c", character];
     if (![orderedCharacterSet containsObject:string]) {
         [NSException raise:@"NSRangeException" format:@"Character must be a ASCII letter, number or punctuation character"];
     }
-    // Return if trying to set to what its already set as
-    if ([string isEqualToString:self.currentCharacter]) {
-        return;
-    }
-    self.currentCharacter = string;
     NSInteger index = [self indexOfCharacter:string];
     [self animateToIndex:index duration:duration completion:completion];
 }
@@ -139,12 +135,13 @@
 
 - (void)setToCharacter:(char)character
 {
-    NSString* string = [NSString stringWithFormat:@"%c", character];
+    self.value = character;
+    NSString* string
+        = [NSString stringWithFormat:@"%c", character];
     if (![orderedCharacterSet containsObject:string]) {
         [NSException raise:@"NSRangeException" format:@"Character must be a ASCII letter, number or punctuation character"];
     }
 
-    self.currentCharacter = string;
     NSInteger index = [self indexOfCharacter:string];
     [self setToIndex:index];
 }

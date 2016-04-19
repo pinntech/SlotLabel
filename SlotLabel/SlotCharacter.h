@@ -34,9 +34,9 @@ IB_DESIGNABLE
 @property (nonatomic, strong) NSMutableArray<UILabel*>* labels;
 
 /**
- *  The character that is current set returned as a string
+ *  The character that is current set returned as an ASCII character
  */
-@property (nonatomic, assign) NSString* currentCharacter;
+@property (nonatomic, assign) unsigned char value;
 
 /**
  *  The font of the labels in the superview
