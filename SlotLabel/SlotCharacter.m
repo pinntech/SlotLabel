@@ -149,54 +149,6 @@
     [self setToIndex:index];
 }
 
-- (void)animateToNumber:(NSInteger)number
-{
-    [self animateToNumber:number completion:nil];
-}
-
-- (void)animateToNumber:(NSInteger)number
-             completion:(void (^)(void))completion
-{
-    [self animateToNumber:number
-                 duration:self.animationSpeed
-               completion:completion];
-}
-
-- (void)animateToNumber:(NSInteger)number
-               duration:(CGFloat)duration
-             completion:(void (^)(void))completion
-{
-    if (number < 0 || number > 9) {
-        [NSException raise:@"ValueOutOfBoundsException" format:@"Index must be in range [0-9]"];
-    }
-    NSString* string = [NSString stringWithFormat:@"%ld", (long)number];
-    if (![orderedCharacterSet containsObject:string]) {
-        [NSException raise:@"NSRangeException" format:@"Character must be a ASCII letter, number or punctuation character"];
-    }
-
-    self.currentCharacter = string;
-    NSInteger index = [self indexOfCharacter:string];
-    [self animateToIndex:index duration:duration completion:completion];
-}
-
-- (void)setToNumber:(NSInteger)number
-{
-    if (number < 0 || number > 9) {
-        [NSException raise:@"NSRangeException" format:@"Index must be in range [0-9]"];
-    }
-    NSString* string = [NSString stringWithFormat:@"%ld", (long)number];
-    if (![orderedCharacterSet containsObject:string]) {
-        [NSException raise:@"NSRangeException" format:@"Character must be a ASCII letter, number or punctuation character"];
-    }
-    // Return if trying to set to what its already set as
-    if ([string isEqualToString:self.currentCharacter]) {
-        return;
-    }
-    self.currentCharacter = string;
-    NSInteger index = [self indexOfCharacter:string];
-    [self setToIndex:index];
-}
-
 #pragma mark - Font
 - (UIFont*)font
 {
@@ -599,9 +551,10 @@
     }
 }
 
-// Determines the index we are at by checking the content offset divided by the height
 - (NSUInteger)currentIndex
 {
+    // Determines index the SlotCharacter is at by checking the content offset
+    // divided by the frame height
     return (NSUInteger)self.contentOffset.y / (NSUInteger)self.frame.size.height;
 }
 

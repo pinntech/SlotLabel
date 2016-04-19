@@ -5,7 +5,7 @@
 [![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![License](https://img.shields.io/cocoapods/l/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![Platform](https://img.shields.io/cocoapods/p/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
-[![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/DWRandom)
+[![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/SlotLabel)
 
 SlotLabel is an animated variant of a UILabel that is heavily inspired by
 casino slots. It was designed as a drop-in replacement for a UILabel. The 
@@ -93,12 +93,11 @@ You can check out the full reference documentation
 
 SlotLabel is an effective UIScrollView hack, the basic magic works by
 positioning UILabels vertically within the UIScrollView, then to animate
-to a specific character an offset is calculated to animate to. The
+to a specific character an offset is calculated to shift content. The
 SlotCharacter does the heavy lifting as far as animation and custom
 configuration go. The SlotLabel itself just positions the SlotCharacters
-horizontally next to each other to behave as a label. Then when setting the 
-text of the SlotLabel it will tell each character where it needs to animate
-to in order to display the correct text.
+horizontally next to each other to behave as a label. The SlotLabel just
+has to orchestrate the correct values to its child SlotCharacter instances.
 
 ### Contributing
 ----------------
@@ -122,6 +121,7 @@ For complete release notes check out the [changelog](https://github.com/pinnrepo
 * Comprehensive testing suite
 * Additional label customization options
 * Dynamic slot label resizing
+* Internationalization
 
 ### License
 -----------

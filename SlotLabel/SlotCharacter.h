@@ -29,47 +29,47 @@ IB_DESIGNABLE
 @interface SlotCharacter : UIScrollView
 
 /**
-*  A container for the vertically organized array of UILabels.
+*  A container for the vertically organized array of UILabels
 */
 @property (nonatomic, strong) NSMutableArray<UILabel*>* labels;
 
 /**
- *  The character that is current set returned as a string.
+ *  The character that is current set returned as a string
  */
-@property (nonatomic, strong) NSString* currentCharacter;
+@property (nonatomic, assign) NSString* currentCharacter;
 
 /**
- *  The font of the labels in the superview.
+ *  The font of the labels in the superview
  */
 @property (nonatomic, strong) UIFont* font;
 
 /**
- *  The font of the labels in the superview.
+ *  The font of the labels in the superview
  */
 @property (nonatomic, assign) IBInspectable NSUInteger fontSize;
 
 /**
- *  The color of the labels while not in animation.
+ *  The color of the labels while not in animation
  */
 @property (nonatomic, strong) IBInspectable UIColor* textColor;
 
 /**
- *  The shadow color of the labels within.
+ *  The shadow color of the labels within
  */
 @property (nonatomic, strong) IBInspectable UIColor* shadowColor;
 
 /**
- *  The shadow offset of the labels within the superview frame.
+ *  The shadow offset of the labels within the superview frame
  */
 @property (nonatomic, assign) IBInspectable CGSize shadowOffset;
 
 /**
- *  The color of the stroke on the labels.
+ *  The color of the stroke on the labels
  */
 @property (nonatomic, strong) IBInspectable UIColor* strokeColor;
 
 /**
- *  The width of the stroke on the labels.
+ *  The width of the stroke on the labels
  */
 @property (nonatomic, assign) IBInspectable CGFloat strokeWidth;
 
@@ -81,63 +81,26 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat animationSpeed;
 
 /**
- *  The color of the labels while in animation.
+ *  The color of the labels while in animation
  */
 @property (nonatomic, strong) IBInspectable UIColor* animationColor;
 
 /**
- *  Sets the vertical alignment of the labels within the superview frame.
+ *  Sets the vertical alignment of the labels within the superview frame
  */
 @property (nonatomic, assign) UIControlContentVerticalAlignment verticalAlignment;
 
 /**
- *  Sets the horizontal alignment of the labels within the superview frame.
+ *  Sets the horizontal alignment of the labels within the superview frame
  */
 @property (nonatomic, assign) NSTextAlignment horizontalAlignment;
-
-/**
- *  Animates the label to a specific number 0-9.
- *
- *  @param number A number in the range 0-9
- */
-- (void)animateToNumber:(NSInteger)number;
-
-/**
- *  Animates the label to a specific number 0-9, with a completion block to be 
- *  ran at the end of the animation.
- *
- *  @param number     A number in the range 0-9
- *  @param completion Completion block to be ran at the end of animation
- */
-- (void)animateToNumber:(NSInteger)number
-             completion:(void (^)(void))completion;
-
-/**
- *  Animates the label to a specific number 0-9, with a completion block to be 
- *  ran at the end of the animation. The duration is the number of seconds to 
- *  animate over.
- *
- *  @param number     A number in the range 0-9
- *  @param duration   Duration to animate over, higher is slower
- *  @param completion Completion block to be ran at the end of animation
- */
-- (void)animateToNumber:(NSInteger)number
-               duration:(CGFloat)duration
-             completion:(void (^)(void))completion;
-
-/**
- *  Sets the label to a specific number 0-9 without animation.
- *
- *  @param number A number in the range 0-9
- */
-- (void)setToNumber:(NSInteger)number;
 
 /**
  *  Animates the label to a specific ASCII character.
  *
  *  @param character An ASCII character to animate to
  */
-- (void)animateToCharacter:(char)character;
+- (void)animateToCharacter:(unsigned char)character;
 
 /**
  *  Animates the label to a ASCII character, with a completion block to be ran 
@@ -146,7 +109,7 @@ IB_DESIGNABLE
  *  @param character  An ASCII character to animate to
  *  @param completion Completion block to be ran at the end of animation
  */
-- (void)animateToCharacter:(char)character
+- (void)animateToCharacter:(unsigned char)character
                 completion:(void (^)(void))completion;
 
 /**
@@ -158,7 +121,7 @@ IB_DESIGNABLE
  *  @param duration   Duration to animate over, higher is slower
  *  @param completion Completion block to be ran at the end of animation
  */
-- (void)animateToCharacter:(char)character
+- (void)animateToCharacter:(unsigned char)character
                   duration:(CGFloat)duration
                 completion:(void (^)(void))completion;
 
@@ -167,7 +130,7 @@ IB_DESIGNABLE
  *
  *  @param character An ASCII character to set to
  */
-- (void)setToCharacter:(char)character;
+- (void)setToCharacter:(unsigned char)character;
 
 /**
  *  Returns YES if the SlotCharacter is currently animating
