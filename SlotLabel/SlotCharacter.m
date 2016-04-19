@@ -685,7 +685,6 @@
         }
             completion:^(BOOL finished) {
                 animationsCount--;
-                NSLog(@"%lu", (long)animationsCount);
                 if (![self isAnimating]) {
                     [self setTextColor:preanimationColor];
                 }

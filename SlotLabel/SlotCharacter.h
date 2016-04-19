@@ -28,7 +28,6 @@ IB_DESIGNABLE
  */
 @interface SlotCharacter : UIScrollView
 
-#pragma mark - Properties
 /**
 *  A container for the vertically organized array of UILabels.
 */
@@ -96,7 +95,6 @@ IB_DESIGNABLE
  */
 @property (nonatomic, assign) NSTextAlignment horizontalAlignment;
 
-#pragma mark - Methods
 /**
  *  Animates the label to a specific number 0-9.
  *
