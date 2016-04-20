@@ -44,11 +44,6 @@ IB_DESIGNABLE
 @property (nonatomic, strong) UIFont* font;
 
 /**
- *  The font of the labels in the superview
- */
-@property (nonatomic, assign) IBInspectable NSUInteger fontSize;
-
-/**
  *  The color of the labels while not in animation
  */
 @property (nonatomic, strong) IBInspectable UIColor* textColor;

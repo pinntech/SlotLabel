@@ -32,18 +32,8 @@
     // Contiguous set of stringified character values
     NSOrderedSet<NSString*>* orderedCharacterSet;
 
-    // Book keeping on the number of animations incremented on queuing, decrementing on completion
+    // Count of animations - incremented on queuing, decrementing on completion
     NSUInteger animationsCount;
-
-    // UILabels variales
-    UIFont* labelsFont;
-    UIColor* labelsTextColor;
-    UIColor* labelsShadowColor;
-    CGSize labelsShadowOffset;
-    UIColor* labelsStrokeColor;
-    CGFloat labelsStrokeWidth;
-    UIControlContentVerticalAlignment labelsVerticalAlignment;
-    NSTextAlignment labelsHorizontalAlignment;
 }
 
 #pragma mark - Superclass
@@ -79,14 +69,14 @@
     self.showsVerticalScrollIndicator = NO;
 
     // Default font characteristics
-    labelsFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
-    labelsTextColor = [UIColor blackColor];
-    labelsShadowColor = nil;
-    labelsShadowOffset = CGSizeMake(0, 0);
-    labelsStrokeColor = [UIColor grayColor];
-    labelsStrokeWidth = 0.0f;
-    labelsVerticalAlignment = UIControlContentVerticalAlignmentBottom;
-    labelsHorizontalAlignment = NSTextAlignmentLeft;
+    self.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    self.textColor = [UIColor blackColor];
+    self.shadowColor = nil;
+    self.shadowOffset = CGSizeMake(0, 0);
+    self.strokeColor = [UIColor grayColor];
+    self.strokeWidth = 0.0f;
+    self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
+    self.horizontalAlignment = NSTextAlignmentLeft;
 
     // Default animation characteristics
     self.animationSpeed = DEFAULT_ANIMATION_SPEED;
@@ -99,17 +89,28 @@
     animationsCount = 0;
 }
 
+- (void)prepareForInterfaceBuilder
+{
+    // Skinning
+    [self addLabels];
+    // Display dummy content
+    [self setToCharacter:'a'];
+}
+
 #pragma mark - Public
 #pragma mark - Setting and Animating Content
 - (void)animateToCharacter:(char)character
 {
-    [self animateToCharacter:character completion:nil];
+    [self animateToCharacter:character
+                  completion:nil];
 }
 
 - (void)animateToCharacter:(char)character
                 completion:(void (^)(void))completion
 {
-    [self animateToCharacter:character duration:self.animationSpeed completion:completion];
+    [self animateToCharacter:character
+                    duration:self.animationSpeed
+                  completion:completion];
 }
 
 - (void)animateToCharacter:(char)character
@@ -122,15 +123,9 @@
         [NSException raise:@"NSRangeException" format:@"Character must be a ASCII letter, number or punctuation character"];
     }
     NSInteger index = [self indexOfCharacter:string];
-    [self animateToIndex:index duration:duration completion:completion];
-}
-
-- (void)prepareForInterfaceBuilder
-{
-    // Skinning
-    [self addLabels];
-    // Display dummy content
-    [self setToCharacter:'a'];
+    [self animateToIndex:index
+                duration:duration
+              completion:completion];
 }
 
 - (void)setToCharacter:(char)character
@@ -147,161 +142,54 @@
 }
 
 #pragma mark - Font
-- (UIFont*)font
-{
-    return labelsFont;
-}
-
 - (void)setFont:(UIFont*)font
 {
-    labelsFont = font;
-    for (UIView* subView in self.subviews) {
-        if ([subView isKindOfClass:[UILabel class]]) {
-            UILabel* label = (UILabel*)subView;
-            [label setFont:font];
-        }
-    }
+    [self setLabelsFont:font];
 }
 
 #pragma mark - Text Color
-- (UIColor*)textColor
-{
-    return labelsTextColor;
-}
-
 - (void)setTextColor:(UIColor*)color
 {
-    //    labelsTextColor = color;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        //        labelsTextColor = color;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                label.textColor = color;
-            }
-        }
-    });
+    [self setLabelsTextColor:color];
 }
 
 #pragma mark - Shadow Color
-- (UIColor*)shadowColor
-{
-    return labelsShadowColor;
-}
-
 - (void)setShadowColor:(UIColor*)color
 {
-    labelsShadowColor = color;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsShadowColor = color;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                [label setShadowColor:color];
-            }
-        }
-    });
+    [self setLabelsShadowColor:color];
 }
 
 #pragma mark - Shadow Offset
-- (CGSize)shadowOffset
-{
-    return labelsShadowOffset;
-}
-
 - (void)setShadowOffset:(CGSize)size
 {
-    labelsShadowOffset = size;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsShadowOffset = size;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                [label setShadowOffset:size];
-            }
-        }
-    });
+    [self setLabelsShadowOffset:size];
 }
 
 #pragma mark - Stroke Color
-- (UIColor*)strokeColor
-{
-    return labelsStrokeColor;
-}
-
 - (void)setStrokeColor:(UIColor*)strokeColor
 {
-    labelsStrokeColor = strokeColor;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsStrokeColor = strokeColor;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                label.layer.borderColor = labelsStrokeColor.CGColor;
-            }
-        }
-    });
+    [self setLabelsStrokeColor:strokeColor];
 }
 
 #pragma mark - Stroke Width
-- (CGFloat)strokeWidth
-{
-    return labelsStrokeWidth;
-}
-
 - (void)setStrokeWidth:(CGFloat)strokeWidth
 {
-    labelsStrokeWidth = strokeWidth;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsStrokeWidth = strokeWidth;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                label.layer.borderColor = labelsStrokeColor.CGColor;
-            }
-        }
-    });
+    [self setLabelsStrokeWidth:strokeWidth];
 }
 
 #pragma mark - Vertical Alignment
-- (UIControlContentVerticalAlignment)verticalAlignment
-{
-    return labelsVerticalAlignment;
-}
-
 - (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsVerticalAlignment = alignment;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                VALabel* label = (VALabel*)subView;
-                [label setVerticalAlignment:alignment];
-            }
-        }
-    });
+    [self setLabelsVerticalAlignment:alignment];
 }
 
 #pragma mark - Horizontal Alignment
-- (NSTextAlignment)horizontalAlignment
-{
-    return labelsHorizontalAlignment;
-}
-
 - (void)setHorizontalAlignment:(NSTextAlignment)alignment
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        labelsHorizontalAlignment = alignment;
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                [label setTextAlignment:alignment];
-            }
-        }
-    });
+    [self setLabelsHorizontalAlignment:alignment];
 }
 
-#pragma mark - Private
+#pragma mark - Private Methods
 - (NSDictionary<NSString*, NSNumber*>*)characterMap
 {
     return @{
@@ -611,20 +499,20 @@
             animations:(void (^)(void))animations
             completion:(void (^)(void))completion
 {
-    // Increment the animations counter to keep track if we are animating or not
-    animationsCount++;
-
-    if (index < 0 || index >= orderedCharacterSet.count) {
-        [NSException raise:@"NSRangeException" format:@"Index out of range"];
-    }
-
-    // Switch the color if we have an animation color
-    UIColor* preanimationColor = labelsTextColor;
-    if (self.animationColor) {
-        [self setTextColor:self.animationColor];
-    }
-
     dispatch_async(dispatch_get_main_queue(), ^{
+        // Increment the animations counter to keep track if we are animating or not
+        animationsCount++;
+
+        if (index < 0 || index >= orderedCharacterSet.count) {
+            [NSException raise:@"NSRangeException" format:@"Index out of range"];
+        }
+
+        // Switch the color if we have an animation color
+        UIColor* preanimationColor = self.textColor;
+        if (self.animationColor) {
+            [self setLabelsTextColor:self.animationColor];
+        }
+
         [UIView animateWithDuration:duration delay:delay options:options animations:^{
             if (animations) {
                 animations();
@@ -636,7 +524,7 @@
             completion:^(BOOL finished) {
                 animationsCount--;
                 if (![self isAnimating]) {
-                    [self setTextColor:preanimationColor];
+                    [self setLabelsTextColor:preanimationColor];
                 }
                 if (completion) {
                     completion();
@@ -651,7 +539,8 @@
         [NSException raise:@"NSRangeException" format:@"Index out of range"];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index) animated:NO];
+        [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index)
+                      animated:NO];
     });
 }
 
@@ -663,6 +552,110 @@
     else {
         return YES;
     }
+}
+
+- (void)setLabelsFont:(UIFont*)font
+{
+    for (UIView* subView in self.subviews) {
+        if ([subView isKindOfClass:[UILabel class]]) {
+            UILabel* label = (UILabel*)subView;
+            [label setFont:font];
+        }
+    }
+}
+
+- (void)setLabelsFontSize:(CGFloat)size
+{
+    for (UIView* subView in self.subviews) {
+        if ([subView isKindOfClass:[UILabel class]]) {
+            UILabel* label = (UILabel*)subView;
+            [label setFont:[UIFont fontWithName:[self.font fontName] size:size]];
+        }
+    }
+}
+
+- (void)setLabelsTextColor:(UIColor*)color
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                [label setTextColor:color];
+            }
+        }
+    });
+}
+
+- (void)setLabelsShadowColor:(UIColor*)color
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                [label setShadowColor:color];
+            }
+        }
+    });
+}
+
+- (void)setLabelsShadowOffset:(CGSize)size
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                [label setShadowOffset:size];
+            }
+        }
+    });
+}
+
+- (void)setLabelsStrokeColor:(UIColor*)color
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                label.layer.borderColor = color.CGColor;
+            }
+        }
+    });
+}
+
+- (void)setLabelsStrokeWidth:(CGFloat)strokeWidth
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                label.layer.borderWidth = strokeWidth;
+            }
+        }
+    });
+}
+
+- (void)setLabelsVerticalAlignment:(UIControlContentVerticalAlignment)alignment
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                VALabel* label = (VALabel*)subView;
+                [label setVerticalAlignment:alignment];
+            }
+        }
+    });
+}
+
+- (void)setLabelsHorizontalAlignment:(NSTextAlignment)alignment
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIView* subView in self.subviews) {
+            if ([subView isKindOfClass:[UILabel class]]) {
+                UILabel* label = (UILabel*)subView;
+                [label setTextAlignment:alignment];
+            }
+        }
+    });
 }
 
 - (void)assertIfNotMainThread
