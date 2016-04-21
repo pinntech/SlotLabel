@@ -1,7 +1,7 @@
 # SlotLabel
 
 [![Version](https://img.shields.io/cocoapods/v/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
-[![CI Status](https://travis-ci.org/dmwesterhoff/SlotLabel.svg?branch=master)](https://travis-ci.org/pinnrepo/SlotLabel)
+[![CI Status](https://travis-ci.org/pinnrepo/SlotLabel.svg?branch=master)](https://travis-ci.org/pinnrepo/SlotLabel)
 [![Doc Coverage](https://img.shields.io/cocoapods/metrics/doc-percent/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![License](https://img.shields.io/cocoapods/l/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![Platform](https://img.shields.io/cocoapods/p/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
