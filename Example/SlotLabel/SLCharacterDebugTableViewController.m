@@ -45,10 +45,10 @@ typedef NS_ENUM(NSUInteger, SLCharacterSettingValue) {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     if (indexPath.row == SLCharacterSettingValueFont) {
-        [self.slotCharacter setFont:[UIFont fontWithName:@"Courier" size:12]];
+        [self.slotCharacter setFont:[UIFont fontWithName:@"Courier" size:25]];
     }
     else if (indexPath.row == SLCharacterSettingValueFontSize) {
-        [self.slotCharacter setFont:[UIFont fontWithName:@"Courier" size:20]];
+        [self.slotCharacter setFont:[UIFont fontWithName:@"Courier" size:40]];
     }
     else if (indexPath.row == SLCharacterSettingValueTextColor) {
         [self.slotCharacter setTextColor:[UIColor magentaColor]];

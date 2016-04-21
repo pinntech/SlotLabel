@@ -73,8 +73,8 @@
     self.textColor = [UIColor blackColor];
     self.shadowColor = nil;
     self.shadowOffset = CGSizeMake(0, 0);
-    self.strokeColor = [UIColor grayColor];
-    self.strokeWidth = 0.0f;
+    //    self.strokeColor = [UIColor grayColor];
+    //    self.strokeWidth = 0.0f;
     self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
     self.horizontalAlignment = NSTextAlignmentLeft;
 
@@ -144,48 +144,56 @@
 #pragma mark - Font
 - (void)setFont:(UIFont*)font
 {
+    _font = font;
     [self setLabelsFont:font];
 }
 
 #pragma mark - Text Color
 - (void)setTextColor:(UIColor*)color
 {
+    _textColor = color;
     [self setLabelsTextColor:color];
 }
 
 #pragma mark - Shadow Color
 - (void)setShadowColor:(UIColor*)color
 {
+    _shadowColor = color;
     [self setLabelsShadowColor:color];
 }
 
 #pragma mark - Shadow Offset
 - (void)setShadowOffset:(CGSize)size
 {
+    _shadowOffset = size;
     [self setLabelsShadowOffset:size];
 }
 
 #pragma mark - Stroke Color
-- (void)setStrokeColor:(UIColor*)strokeColor
+- (void)setStrokeColor:(UIColor*)color
 {
-    [self setLabelsStrokeColor:strokeColor];
+    _strokeColor = color;
+    [self setLabelsStrokeColor:color];
 }
 
 #pragma mark - Stroke Width
 - (void)setStrokeWidth:(CGFloat)strokeWidth
 {
+    _strokeWidth = strokeWidth;
     [self setLabelsStrokeWidth:strokeWidth];
 }
 
 #pragma mark - Vertical Alignment
 - (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
 {
+    _verticalAlignment = alignment;
     [self setLabelsVerticalAlignment:alignment];
 }
 
 #pragma mark - Horizontal Alignment
 - (void)setHorizontalAlignment:(NSTextAlignment)alignment
 {
+    _horizontalAlignment = alignment;
     [self setLabelsHorizontalAlignment:alignment];
 }
 
@@ -616,7 +624,11 @@
         for (UIView* subView in self.subviews) {
             if ([subView isKindOfClass:[UILabel class]]) {
                 UILabel* label = (UILabel*)subView;
-                label.layer.borderColor = color.CGColor;
+                //                NSLog(@"%@", label.attributedText);
+                NSDictionary* textAttributes = @{ NSStrokeColorAttributeName : color,
+                    NSForegroundColorAttributeName : label.textColor,
+                    NSStrokeWidthAttributeName : @(-4.0) };
+                label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:textAttributes];
             }
         }
     });
@@ -628,7 +640,13 @@
         for (UIView* subView in self.subviews) {
             if ([subView isKindOfClass:[UILabel class]]) {
                 UILabel* label = (UILabel*)subView;
-                label.layer.borderWidth = strokeWidth;
+                NSLog(@"%@", self.strokeColor);
+                NSLog(@"%@", self.textColor);
+
+                NSDictionary* textAttributes = @{ NSStrokeColorAttributeName : self.strokeColor,
+                    NSForegroundColorAttributeName : self.textColor,
+                    NSStrokeWidthAttributeName : @(-strokeWidth) };
+                label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:textAttributes];
             }
         }
     });
