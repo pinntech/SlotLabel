@@ -36,7 +36,7 @@ IB_DESIGNABLE
 /**
 *  A logical array of the horizontally aligned characters from left to right.
 */
-@property (nonatomic, strong) NSMutableArray<SlotCharacter*>* characters;
+@property (nonatomic, strong) NSMutableArray* characters;
 
 /**
  *  How many characters are currently being draw.

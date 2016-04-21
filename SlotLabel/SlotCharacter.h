@@ -31,7 +31,7 @@ IB_DESIGNABLE
 /**
 *  A container for the vertically organized array of UILabels
 */
-@property (nonatomic, strong) NSMutableArray<UILabel*>* labels;
+@property (nonatomic, strong) NSMutableArray* labels;
 
 /**
  *  The character that is current set returned as an ASCII character

@@ -164,12 +164,14 @@
 
 - (CGFloat)animationSpeed
 {
-    return [self.characters firstObject].animationSpeed;
+    SlotCharacter* slotCharacter = (SlotCharacter*)[self.characters firstObject];
+    return slotCharacter.animationSpeed;
 }
 
 - (UIColor*)animationColor
 {
-    return [self.characters firstObject].animationColor;
+    SlotCharacter* slotCharacter = (SlotCharacter*)[self.characters firstObject];
+    return slotCharacter.animationColor;
 }
 
 - (void)setAnimationColor:(UIColor*)animationColor
