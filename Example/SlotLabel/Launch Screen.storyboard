@@ -17,21 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlotLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elF-eT-ShV">
-                                <rect key="frame" x="209" y="273" width="182" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="182" id="df6-FL-WaW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="35"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlotLabel" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="226" y="279" width="149" height="42"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="36"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="elF-eT-ShV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="253" id="ZjS-hc-6Ah"/>
-                            <constraint firstItem="elF-eT-ShV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oea-W3-u3r"/>
-                            <constraint firstItem="elF-eT-ShV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zQj-PV-CFV"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7dM-a0-oos"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nzH-00-K51"/>
                         </constraints>
                     </view>
                 </viewController>
