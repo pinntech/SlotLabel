@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '36F991668C59B2AED2BF96F2'
+               BlueprintIdentifier = '9071E2AC3C39C093E2EB8AFA'
                BlueprintName = 'SlotLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SlotLabel.framework'>
