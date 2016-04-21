@@ -27,10 +27,10 @@
 
 @implementation SlotCharacter {
     // Maps the character value to an index in the ordered character set
-    NSDictionary<NSString*, NSNumber*>* characterMap;
+    NSDictionary* characterMap;
 
     // Contiguous set of stringified character values
-    NSOrderedSet<NSString*>* orderedCharacterSet;
+    NSOrderedSet* orderedCharacterSet;
 
     // Count of animations - incremented on queuing, decrementing on completion
     NSUInteger animationsCount;
@@ -198,7 +198,7 @@
 }
 
 #pragma mark - Private Methods
-- (NSDictionary<NSString*, NSNumber*>*)characterMap
+- (NSDictionary*)characterMap
 {
     return @{
         // Space character
