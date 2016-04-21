@@ -99,13 +99,13 @@
 
 #pragma mark - Public
 #pragma mark - Setting and Animating Content
-- (void)animateToCharacter:(char)character
+- (void)animateToCharacter:(unsigned char)character
 {
     [self animateToCharacter:character
                   completion:nil];
 }
 
-- (void)animateToCharacter:(char)character
+- (void)animateToCharacter:(unsigned char)character
                 completion:(void (^)(void))completion
 {
     [self animateToCharacter:character
@@ -113,7 +113,7 @@
                   completion:completion];
 }
 
-- (void)animateToCharacter:(char)character
+- (void)animateToCharacter:(unsigned char)character
                   duration:(CGFloat)duration
                 completion:(void (^)(void))completion
 {
@@ -128,7 +128,7 @@
               completion:completion];
 }
 
-- (void)setToCharacter:(char)character
+- (void)setToCharacter:(unsigned char)character
 {
     self.value = character;
     NSString* string
