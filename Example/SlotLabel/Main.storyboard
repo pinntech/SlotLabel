@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SlotLabel-->
@@ -117,15 +118,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-EN-LGh" customClass="SlotLabel">
-                                <rect key="frame" x="194" y="110" width="180" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0D-EN-LGh" customClass="SlotLabel">
+                                <rect key="frame" x="115" y="107" width="338" height="105"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIW-qM-uI1">
-                                <rect key="frame" x="345" y="160" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G0D-EN-LGh" firstAttribute="top" secondItem="Wh6-Ul-DdR" secondAttribute="bottom" constant="43" id="Ggf-UD-p0K"/>
+                            <constraint firstItem="G0D-EN-LGh" firstAttribute="leading" secondItem="jE2-fD-BD9" secondAttribute="leadingMargin" constant="95" id="MjU-BH-KW1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G0D-EN-LGh" secondAttribute="trailing" constant="95" id="P5O-EO-Ock"/>
+                            <constraint firstItem="uos-Dp-HzO" firstAttribute="top" secondItem="G0D-EN-LGh" secondAttribute="bottom" constant="108" id="xIj-hj-ID1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Basic Demo" id="zA2-Uy-rlF"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

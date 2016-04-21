@@ -1,4 +1,4 @@
-// SLBasicDemoViewController.m
+// SlotCharacterTests.m
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,35 +19,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "SLBasicDemoViewController.h"
+#import <SlotLabel/SlotCharacter.h>
+#import <XCTest/XCTest.h>
 
-@implementation SLBasicDemoViewController
+@interface SlotCharacterTests : XCTestCase
 
-- (void)viewDidLoad
+@end
+
+@implementation SlotCharacterTests
+
+- (void)setUp
 {
-    [super viewDidLoad];
-
-    [self animate];
-    [NSTimer scheduledTimerWithTimeInterval:12
-                                     target:self
-                                   selector:@selector(animate)
-                                   userInfo:nil
-                                    repeats:YES];
-    [self.slotLabel setNumberOfCharacters:14];
-    // Do this stuff after the character amount is set
-    self.slotLabel.animationSpeed = 3.0f;
-    [self.slotLabel setFont:[UIFont fontWithName:@"Courier" size:35]];
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)animate
+- (void)tearDown
 {
-    [self.slotLabel animateToString:@"slot label"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.slotLabel animateToString:@"animates"];
-    });
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(8.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.slotLabel animateToString:@"anything"];
-    });
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testSlotCharacterShouldInit
+{
+    SlotCharacter* slotCharacter = [[SlotCharacter alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    XCTAssertNotNil(slotCharacter);
 }
 
 @end
