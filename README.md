@@ -7,11 +7,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/SlotLabel.svg?style=flat)](http://cocoapods.org/pods/SlotLabel)
 [![Language](https://img.shields.io/badge/language-objective--c-lightgrey.svg)](http://cocoapods.org/pods/SlotLabel)
 
-SlotLabel is an animated variant of a UILabel that is heavily inspired by
+SlotLabel is an animated label that is heavily inspired by
 casino slots. It was designed as a drop-in replacement for a UILabel. The 
 interface provides customization properties and animation methods. Animating
-the label to a string is a simple one liner, and can be customized to fit
-your apps style.
+the label to a string is a dead simple, and can be customized to fit
+many different use cases.
 
 ### Table of Contents
 ---------------------
@@ -32,9 +32,9 @@ your apps style.
 ------------
 
 * A smooth easy to use drop in replacement for a UILabel
-* Easy to customize controls
-* IBDesignable and IBInspectable
-* 100% Documentation coverage
+* Lots of customization options
+* IBDesignable and IBInspectable properties
+* 100% documentation coverage
 
 ### Installation
 ----------------
