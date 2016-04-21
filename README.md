@@ -116,7 +116,30 @@ Heres a quick run down of all configurable properties and methods
 ### Usage
 ---------
 
-Coming soon...
+##### Storyboard
+
+Simply drag a UIView reference onto your storyboard where you would like it
+to go. Then set your custom class to `SlotLabel` and your set. If you would
+like you can then configure some of the IBInspectable properties via the 
+storyboard attributes editor (or do it in code!). Next you will want to
+create an IBOutlet for your SlotLabel instance.
+
+Now in your view controller you can start animating:
+```objc
+[self.slotLabel animateToString:@"hello world"];
+```
+
+##### Programmatically
+
+Here your just gonna do a frame init, configure, add the subview and your good
+to go!
+
+```objc
+SlotLabel *slotLabel = [[SlotLabel alloc] initWithFrame:CGRectMake(100,100,200,200)];
+slotLabel.animationSpeed = 2.0f;
+[self.view addSubview:slotLabel];
+[slotLabel animateToString:@"programmatically"];
+```
 
 ### Example
 -----------
