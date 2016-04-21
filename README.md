@@ -78,6 +78,16 @@ Heres a quick run down of all configurable properties and methods
 
 ###### Properties
 ```objc
+- (void)setFont:(UIFont*)font;
+- (void)setTextColor:(UIColor*)color;
+- (void)setShadowColor:(UIColor*)color;
+- (void)setShadowOffset:(CGSize)size;
+- (void)setStrokeColor:(UIColor*)color;
+- (void)setStrokeWidth:(CGFloat)width;
+- (void)setAnimationSpeed:(CGFloat)animationSpeed;
+- (void)setAnimationColor:(UIColor*)color;
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment;
+- (void)setHorizontalAlignment:(NSTextAlignment)alignment;
 ```
 
 ###### Methods
@@ -158,6 +168,7 @@ For complete release notes check out the [changelog](https://github.com/pinnrepo
 * Additional label customization options
 * Dynamic slot label resizing
 * Internationalization
+* Improve performance with different character sets
 
 ### License
 -----------
