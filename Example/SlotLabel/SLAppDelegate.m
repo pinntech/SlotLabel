@@ -31,7 +31,7 @@
     shadow.shadowOffset = CGSizeMake(0, 0);
     NSDictionary* titleAttributes = @{ NSForegroundColorAttributeName : [UIColor darkGrayColor],
         NSShadowAttributeName : shadow,
-        NSFontAttributeName : [UIFont systemFontOfSize:20] };
+        NSFontAttributeName : [UIFont fontWithName:@"TrebuchetMS" size:20] };
     [[UINavigationBar appearance] setTitleTextAttributes:titleAttributes];
 
     return YES;
