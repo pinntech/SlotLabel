@@ -27,7 +27,7 @@
 {
     // Override point for customization after application launch.
 
-    NSDictionary* textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor], UITextAttributeTextColor, [UIColor whiteColor], UITextAttributeTextShadowColor, nil];
+    NSDictionary* textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor], NSForegroundColorAttributeName, [UIColor whiteColor], NSShadowAttributeName, nil];
     [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
 
     return YES;

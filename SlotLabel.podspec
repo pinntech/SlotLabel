@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.author           = { "David Westerhoff" => "dmwesterhoff@gmail.com" }
   s.source           = { :git => "https://github.com/pinnrepo/SlotLabel.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'SlotLabel/*'
