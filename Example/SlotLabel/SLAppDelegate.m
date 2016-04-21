@@ -26,9 +26,13 @@
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     // Override point for customization after application launch.
-
-    NSDictionary* textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor darkGrayColor], NSForegroundColorAttributeName, [UIColor whiteColor], NSShadowAttributeName, nil];
-    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    NSShadow* shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor blackColor];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    NSDictionary* titleAttributes = @{ NSForegroundColorAttributeName : [UIColor darkGrayColor],
+        NSShadowAttributeName : shadow,
+        NSFontAttributeName : [UIFont systemFontOfSize:20] };
+    [[UINavigationBar appearance] setTitleTextAttributes:titleAttributes];
 
     return YES;
 }
