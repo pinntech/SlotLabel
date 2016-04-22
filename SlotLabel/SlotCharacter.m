@@ -76,7 +76,7 @@
     self.strokeColor = [UIColor grayColor];
     self.strokeWidth = 0.0f;
     self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
-    self.horizontalAlignment = NSTextAlignmentLeft;
+    self.horizontalAlignment = NSTextAlignmentCenter;
 
     // Default animation characteristics
     self.animationSpeed = DEFAULT_ANIMATION_SPEED;
@@ -91,9 +91,7 @@
 
 - (void)prepareForInterfaceBuilder
 {
-    // Skinning
     [self addLabels];
-    // Display dummy content
     [self setToCharacter:'a'];
 }
 
@@ -525,9 +523,7 @@
             if (animations) {
                 animations();
             }
-
             [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index) animated:NO];
-
         }
             completion:^(BOOL finished) {
                 animationsCount--;
@@ -546,10 +542,8 @@
     if (index < 0 || index >= orderedCharacterSet.count) {
         [NSException raise:@"NSRangeException" format:@"Index out of range"];
     }
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index)
-                      animated:NO];
-    });
+    [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index)
+                  animated:NO];
 }
 
 - (BOOL)isAnimating
@@ -624,9 +618,11 @@
         for (UIView* subView in self.subviews) {
             if ([subView isKindOfClass:[UILabel class]]) {
                 UILabel* label = (UILabel*)subView;
-                NSDictionary* textAttributes = @{ NSStrokeColorAttributeName : color,
+                NSDictionary* textAttributes = @{
+                    NSStrokeColorAttributeName : color,
                     NSForegroundColorAttributeName : self.textColor,
-                    NSStrokeWidthAttributeName : @(-self.strokeWidth) };
+                    NSStrokeWidthAttributeName : @(-self.strokeWidth)
+                };
                 label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:textAttributes];
             }
         }
@@ -639,9 +635,11 @@
         for (UIView* subView in self.subviews) {
             if ([subView isKindOfClass:[UILabel class]]) {
                 UILabel* label = (UILabel*)subView;
-                NSDictionary* textAttributes = @{ NSStrokeColorAttributeName : self.strokeColor,
+                NSDictionary* textAttributes = @{
+                    NSStrokeColorAttributeName : self.strokeColor,
                     NSForegroundColorAttributeName : self.textColor,
-                    NSStrokeWidthAttributeName : @(-strokeWidth) };
+                    NSStrokeWidthAttributeName : @(-strokeWidth)
+                };
                 label.attributedText = [[NSAttributedString alloc] initWithString:label.text attributes:textAttributes];
             }
         }

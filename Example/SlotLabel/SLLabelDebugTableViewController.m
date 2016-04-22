@@ -1,4 +1,4 @@
-// SLVerticallyAlignedLabel.h
+// SLLabelDebugTableViewController.m
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,18 +19,44 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "SLLabelDebugTableViewController.h"
 
-/**
- *  A UILabel subclass that can be vertically aligned via the
- *  UIControlContentVerticalAlignment settable property which aligns top, middle,
- *  or bottom
- */
-@interface SLVerticallyAlignedLabel : UILabel
+typedef NS_ENUM(NSUInteger, SLCharacterSettingValue) {
+    SLCharacterSettingValueFont,
+    SLCharacterSettingValueFontSize,
+    SLCharacterSettingValueTextColor,
+    SLCharacterSettingValueShadowColor,
+    SLCharacterSettingValueShadowOffset,
+    SLCharacterSettingValueStrokeColor,
+    SLCharacterSettingValueStrokeWidth,
+    SLCharacterSettingValueAnimationSpeed,
+    SLCharacterSettingValueAnimationColor,
+    SLCharacterSettingValueVerticalAlignment,
+    SLCharacterSettingValueHorizontalAlignment
+};
 
-/**
- *  The vertical alignment of the label in its containing view
- */
-@property (nonatomic, assign) UIControlContentVerticalAlignment verticalAlignment;
+@interface SLLabelDebugTableViewController ()
+
+@end
+
+@implementation SLLabelDebugTableViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self.slotLabel animateToString:@"hello"];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)tableView:(UITableView*)tableView
+    didSelectRowAtIndexPath:(NSIndexPath*)indexPath
+{
+}
 
 @end

@@ -1,4 +1,4 @@
-// SLVerticallyAlignedLabel.h
+// SLLabelDebugTableViewController.h
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,18 +19,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <SlotLabel/SlotLabel.h>
 #import <UIKit/UIKit.h>
 
-/**
- *  A UILabel subclass that can be vertically aligned via the
- *  UIControlContentVerticalAlignment settable property which aligns top, middle,
- *  or bottom
- */
-@interface SLVerticallyAlignedLabel : UILabel
-
-/**
- *  The vertical alignment of the label in its containing view
- */
-@property (nonatomic, assign) UIControlContentVerticalAlignment verticalAlignment;
-
+@interface SLLabelDebugTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet SlotLabel* slotLabel;
 @end
