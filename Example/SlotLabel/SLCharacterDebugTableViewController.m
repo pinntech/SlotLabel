@@ -86,7 +86,7 @@ typedef NS_ENUM(NSUInteger, SLCharacterSettingValue) {
         [self.slotCharacter setAnimationColor:[UIColor greenColor]];
     }
     else if (indexPath.row == SLCharacterSettingValueVerticalAlignment) {
-        [self.slotCharacter setVerticalAlignment:UIControlContentVerticalAlignmentBottom];
+        [self.slotCharacter setVerticalAlignment:UIControlContentVerticalAlignmentTop];
     }
     else if (indexPath.row == SLCharacterSettingValueHorizontalAlignment) {
         [self.slotCharacter setHorizontalAlignment:NSTextAlignmentLeft];

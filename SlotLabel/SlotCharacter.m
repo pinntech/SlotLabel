@@ -19,8 +19,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "SLVerticallyAlignedLabel.h"
 #import "SlotCharacter.h"
-#import "VALabel.h"
 
 // Default values
 #define DEFAULT_ANIMATION_SPEED (0.5)
@@ -434,7 +434,7 @@
     // Add a contiguous set of labels vertically positioned based on the frame height
     for (int i = 0; i < orderedCharacterSet.count; i++) {
         CGRect rect = CGRectMake(0, 0 + (self.frame.size.height * i), self.frame.size.width, self.frame.size.height);
-        VALabel* label = [[VALabel alloc] initWithFrame:rect];
+        SLVerticallyAlignedLabel* label = [[SLVerticallyAlignedLabel alloc] initWithFrame:rect];
         label.text = orderedCharacterSet[i];
         [label setFont:[UIFont systemFontOfSize:55]];
         label.adjustsFontSizeToFitWidth = YES;
@@ -653,7 +653,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         for (UIView* subView in self.subviews) {
             if ([subView isKindOfClass:[UILabel class]]) {
-                VALabel* label = (VALabel*)subView;
+                SLVerticallyAlignedLabel* label = (SLVerticallyAlignedLabel*)subView;
                 [label setVerticalAlignment:alignment];
             }
         }

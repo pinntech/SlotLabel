@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SlotLabel"
-  s.version          = "0.1.3"
+  s.version          = "0.2.0"
   s.summary          = "A slot machine inspired, UIKit based class that was made to be animated."
 
   s.description      = <<-DESC
