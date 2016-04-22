@@ -434,9 +434,15 @@
         CGRect rect = CGRectMake(0, 0 + (self.frame.size.height * i), self.frame.size.width, self.frame.size.height);
         SLVerticallyAlignedLabel* label = [[SLVerticallyAlignedLabel alloc] initWithFrame:rect];
         label.text = orderedCharacterSet[i];
-        [label setFont:[UIFont systemFontOfSize:55]];
+        // Configure the label
         label.adjustsFontSizeToFitWidth = YES;
-        [label setVerticalAlignment:UIControlContentVerticalAlignmentBottom];
+        [label setFont:self.font];
+        [label setShadowColor:self.shadowColor];
+        [label setShadowOffset:self.shadowOffset];
+        [label setVerticalAlignment:self.verticalAlignment];
+        [label setTextAlignment:self.horizontalAlignment];
+        label.textColor = self.textColor;
+        // Add to subview as well as labels array
         [self addSubview:label];
         [self.labels addObject:label];
     }
@@ -523,7 +529,8 @@
             if (animations) {
                 animations();
             }
-            [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index) animated:NO];
+            [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * index)
+                          animated:NO];
         }
             completion:^(BOOL finished) {
                 animationsCount--;

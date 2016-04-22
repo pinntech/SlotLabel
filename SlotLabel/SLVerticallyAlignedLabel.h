@@ -24,7 +24,7 @@
 /**
  *  A UILabel subclass that can be vertically aligned via the
  *  UIControlContentVerticalAlignment settable property which aligns top, middle,
- *  or bottom
+ *  or bottom.
  */
 @interface SLVerticallyAlignedLabel : UILabel
 
