@@ -21,11 +21,11 @@
                                         <rect key="frame" x="0.0" y="99" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SUy-vs-LdD" id="jhM-o2-mnc">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Configuration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7vn-YG-bYl">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,11 +38,11 @@
                                         <rect key="frame" x="0.0" y="143" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dGB-hc-yQu" id="4bU-ZM-bIJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Basic Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3AO-qc-pEV">
-                                                    <rect key="frame" x="15" y="0.0" width="518" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="518" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,11 +58,11 @@
                                         <rect key="frame" x="0.0" y="187" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vkd-uz-56P" id="FUL-wW-2Fq">
-                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Character Debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EVl-2U-TsN">
-                                                    <rect key="frame" x="15" y="0.0" width="518" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="518" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,11 +78,11 @@
                                         <rect key="frame" x="0.0" y="231" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LHr-j7-F1e" id="uxM-n2-Wsy">
-                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="535" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label Debug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q9p-WF-ecj">
-                                                    <rect key="frame" x="15" y="0.0" width="518" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="518" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,7 +159,7 @@
                                         <rect key="frame" x="0.0" y="99" width="568" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6C-8h-cyd" id="ySy-9r-JF3">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3c-Q1-u4p" customClass="SlotCharacter">
@@ -188,11 +188,11 @@
                                         <rect key="frame" x="0.0" y="216" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7S-Kr-BiI" id="ZZD-0Q-pGt">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nvb-gz-S31">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,11 +205,11 @@
                                         <rect key="frame" x="0.0" y="254" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pxf-iG-OdA" id="wjL-QJ-yjr">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="font size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2pd-nJ-1R1">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,11 +222,11 @@
                                         <rect key="frame" x="0.0" y="292" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RZq-Sv-e0w" id="gZM-Sl-aTA">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="text color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Ov-Lu-FBo">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,11 +239,11 @@
                                         <rect key="frame" x="0.0" y="330" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pg-Ly-jT5" id="enl-i0-uYA">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="shadow color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3P4-1N-EV7">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,11 +256,11 @@
                                         <rect key="frame" x="0.0" y="368" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nee-ye-Gve" id="JhU-zX-Kuh">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="shadow offset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U9l-WI-OXb">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -273,11 +273,11 @@
                                         <rect key="frame" x="0.0" y="406" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="psC-ua-N9I" id="D66-At-jMB">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="stroke color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vTw-BM-jzN">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -290,11 +290,11 @@
                                         <rect key="frame" x="0.0" y="444" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lLs-Dj-cHA" id="tQf-bE-fjc">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="stroke width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n9I-6V-R5y">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -307,11 +307,11 @@
                                         <rect key="frame" x="0.0" y="482" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gMU-O6-G1z" id="IMl-gH-DZZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="animation speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="InX-WL-HeS">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -324,11 +324,11 @@
                                         <rect key="frame" x="0.0" y="520" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p9o-hn-P6L" id="4sS-Up-Oxd">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="animation color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fge-H1-iHK">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,11 +341,11 @@
                                         <rect key="frame" x="0.0" y="558" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ugy-si-YwU" id="dhg-Zb-pn7">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="vertical alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Tn-gd-gLu">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -358,11 +358,11 @@
                                         <rect key="frame" x="0.0" y="596" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kva-Dd-EZ6" id="kCc-XQ-WX3">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="horizontal alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yev-Ur-qUH">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -425,7 +425,7 @@
                                         <rect key="frame" x="0.0" y="99" width="568" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kGa-n1-MiA" id="uTt-8n-gAq">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-FS-eX5" customClass="SlotLabel">
@@ -449,11 +449,11 @@
                                         <rect key="frame" x="0.0" y="202" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I3Q-R1-w64" id="X9D-Ac-Frr">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="font" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eb0-cf-afU">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -466,11 +466,11 @@
                                         <rect key="frame" x="0.0" y="240" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XAM-EP-sLH" id="uQ1-cX-caC">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="font size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c83-ht-MCh">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -483,11 +483,11 @@
                                         <rect key="frame" x="0.0" y="278" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LhF-te-GyF" id="nAk-iZ-Mpv">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="text color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kNb-Av-1uu">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -500,11 +500,11 @@
                                         <rect key="frame" x="0.0" y="316" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F4Z-GM-O8z" id="8Ph-qZ-0fk">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="shadow color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWE-o5-Waf">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -517,11 +517,11 @@
                                         <rect key="frame" x="0.0" y="354" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UiE-jr-KG7" id="rca-eU-Tir">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="shadow offset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="liX-Ud-YyL">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -534,11 +534,11 @@
                                         <rect key="frame" x="0.0" y="392" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3AC-29-EtV" id="ceg-gG-jXd">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="stroke color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jpI-gt-8fA">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -551,11 +551,11 @@
                                         <rect key="frame" x="0.0" y="430" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sQw-B4-UAd" id="PgM-Cp-4kT">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="stroke width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZUP-fg-kJC">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -568,11 +568,11 @@
                                         <rect key="frame" x="0.0" y="468" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7l-6p-ae6" id="tMh-I1-gEf">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="animation speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8sZ-Zs-zTj">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -585,11 +585,11 @@
                                         <rect key="frame" x="0.0" y="506" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJu-8t-BJn" id="BoX-k4-zOY">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="animation color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y0r-TV-df1">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -602,11 +602,11 @@
                                         <rect key="frame" x="0.0" y="544" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8N-y3-Zwd" id="gqL-hP-ugw">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="vertical alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lgg-Ij-5mw">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -619,11 +619,11 @@
                                         <rect key="frame" x="0.0" y="582" width="568" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y4W-rM-AVc" id="zhK-1Z-g6c">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="37.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="horizontal alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Adl-iV-N0X">
-                                                    <rect key="frame" x="15" y="0.0" width="538" height="37"/>
+                                                    <rect key="frame" x="15" y="0.0" width="538" height="37.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
