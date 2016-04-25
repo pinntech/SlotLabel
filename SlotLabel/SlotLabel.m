@@ -28,9 +28,6 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.textColor = [UIColor blackColor];
-        self.numberOfCharacters = 1;
-
         self.characters = [[NSMutableArray alloc] init];
     }
     return self;
@@ -43,6 +40,11 @@
         self.characters = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)prepareForInterfaceBuilder
+{
+    //    self.backgroundColor = [UIColor blueColor];
 }
 
 #pragma mark - Public
@@ -110,6 +112,7 @@
 
 - (void)setFont:(UIFont*)font
 {
+    _font = font;
     for (SlotCharacter* character in self.characters) {
         [character setFont:font];
     }
@@ -117,20 +120,15 @@
 
 - (void)setTextColor:(UIColor*)color
 {
+    _textColor = color;
     for (SlotCharacter* character in self.characters) {
         [character setTextColor:color];
     }
 }
 
-- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
-{
-    for (SlotCharacter* character in self.characters) {
-        [character setVerticalAlignment:alignment];
-    }
-}
-
 - (void)setShadowColor:(UIColor*)color
 {
+    _shadowColor = color;
     for (SlotCharacter* character in self.characters) {
         [character setShadowColor:color];
     }
@@ -138,6 +136,7 @@
 
 - (void)setShadowOffset:(CGSize)size
 {
+    _shadowOffset = size;
     for (SlotCharacter* character in self.characters) {
         [character setShadowOffset:size];
     }
@@ -162,10 +161,19 @@
     return slotCharacter.animationColor;
 }
 
-- (void)setAnimationColor:(UIColor*)animationColor
+- (void)setAnimationColor:(UIColor*)color
 {
+    //    _animationColor = color;
     for (SlotCharacter* character in self.characters) {
-        character.animationColor = animationColor;
+        character.animationColor = color;
+    }
+}
+
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
+{
+    _verticalAlignment = alignment;
+    for (SlotCharacter* character in self.characters) {
+        [character setVerticalAlignment:alignment];
     }
 }
 
@@ -173,7 +181,11 @@
 - (void)addCharacters:(NSInteger)amount
 {
     for (int i = 0; i < amount; i++) {
-        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:CGRectMake(self.frame.size.width / amount * i, 0, self.frame.size.width, self.frame.size.height)];
+        NSLog(@"%lu", i);
+        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:CGRectMake(self.frame.size.width / amount * i, 0, self.frame.size.width / amount, self.frame.size.height)];
+        if (i % 2 == 0) {
+            [character setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+        }
         [self addSubview:character];
         [character sizeToFit];
         [character setToCharacter:' '];
