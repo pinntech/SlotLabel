@@ -68,7 +68,7 @@
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
 
-    // Default font characteristics
+    // Default label characteristics
     self.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     self.textColor = [UIColor blackColor];
     self.shadowColor = nil;
@@ -433,12 +433,18 @@
     for (int i = 0; i < orderedCharacterSet.count; i++) {
         CGRect rect = CGRectMake(0, 0 + (self.frame.size.height * i), self.frame.size.width, self.frame.size.height);
         SLVerticallyAlignedLabel* label = [[SLVerticallyAlignedLabel alloc] initWithFrame:rect];
-        label.text = orderedCharacterSet[i];
         // Configure the label
         label.adjustsFontSizeToFitWidth = YES;
         [label setFont:self.font];
         [label setShadowColor:self.shadowColor];
         [label setShadowOffset:self.shadowOffset];
+        NSDictionary* textAttributes = @{
+            NSStrokeColorAttributeName : self.strokeColor,
+            NSForegroundColorAttributeName : self.textColor,
+            NSStrokeWidthAttributeName : @(-self.strokeWidth)
+        };
+        label.attributedText = [[NSAttributedString alloc] initWithString:orderedCharacterSet[i]
+                                                               attributes:textAttributes];
         [label setVerticalAlignment:self.verticalAlignment];
         [label setTextAlignment:self.horizontalAlignment];
         label.textColor = self.textColor;
