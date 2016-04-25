@@ -144,31 +144,31 @@
 }
 
 #pragma mark - Text Color
-- (void)setTextColor:(UIColor*)color
+- (void)setTextColor:(UIColor*)textColor
 {
-    _textColor = color;
-    [self setLabelsTextColor:color];
+    _textColor = textColor;
+    [self setLabelsTextColor:textColor];
 }
 
 #pragma mark - Shadow Color
-- (void)setShadowColor:(UIColor*)color
+- (void)setShadowColor:(UIColor*)shadowColor
 {
-    _shadowColor = color;
-    [self setLabelsShadowColor:color];
+    _shadowColor = shadowColor;
+    [self setLabelsShadowColor:shadowColor];
 }
 
 #pragma mark - Shadow Offset
-- (void)setShadowOffset:(CGSize)size
+- (void)setShadowOffset:(CGSize)shadowOffset
 {
-    _shadowOffset = size;
-    [self setLabelsShadowOffset:size];
+    _shadowOffset = shadowOffset;
+    [self setLabelsShadowOffset:shadowOffset];
 }
 
 #pragma mark - Stroke Color
-- (void)setStrokeColor:(UIColor*)color
+- (void)setStrokeColor:(UIColor*)strokeColor
 {
-    _strokeColor = color;
-    [self setLabelsStrokeColor:color];
+    _strokeColor = strokeColor;
+    [self setLabelsStrokeColor:strokeColor];
 }
 
 #pragma mark - Stroke Width
@@ -179,17 +179,17 @@
 }
 
 #pragma mark - Vertical Alignment
-- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
 {
-    _verticalAlignment = alignment;
-    [self setLabelsVerticalAlignment:alignment];
+    _verticalAlignment = verticalAlignment;
+    [self setLabelsVerticalAlignment:verticalAlignment];
 }
 
 #pragma mark - Horizontal Alignment
-- (void)setHorizontalAlignment:(NSTextAlignment)alignment
+- (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment
 {
-    _horizontalAlignment = alignment;
-    [self setLabelsHorizontalAlignment:alignment];
+    _horizontalAlignment = horizontalAlignment;
+    [self setLabelsHorizontalAlignment:horizontalAlignment];
 }
 
 #pragma mark - Private Methods

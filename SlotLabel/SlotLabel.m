@@ -133,35 +133,35 @@
     }
 }
 
-- (void)setTextColor:(UIColor*)color
+- (void)setTextColor:(UIColor*)textColor
 {
-    _textColor = color;
+    _textColor = textColor;
     for (SlotCharacter* character in self.characters) {
-        [character setTextColor:color];
+        [character setTextColor:textColor];
     }
 }
 
-- (void)setShadowColor:(UIColor*)color
+- (void)setShadowColor:(UIColor*)shadowColor
 {
-    _shadowColor = color;
+    _shadowColor = shadowColor;
     for (SlotCharacter* character in self.characters) {
-        [character setShadowColor:color];
+        [character setShadowColor:shadowColor];
     }
 }
 
-- (void)setShadowOffset:(CGSize)size
+- (void)setShadowOffset:(CGSize)shadowOffset
 {
-    _shadowOffset = size;
+    _shadowOffset = shadowOffset;
     for (SlotCharacter* character in self.characters) {
-        [character setShadowOffset:size];
+        [character setShadowOffset:shadowOffset];
     }
 }
 
-- (void)setStrokeColor:(UIColor*)color
+- (void)setStrokeColor:(UIColor*)strokeColor
 {
-    _strokeColor = color;
+    _strokeColor = strokeColor;
     for (SlotCharacter* character in self.characters) {
-        [character setStrokeColor:color];
+        [character setStrokeColor:strokeColor];
     }
 }
 
@@ -176,27 +176,30 @@
 - (void)setAnimationSpeed:(CGFloat)animationSpeed
 {
     _animationSpeed = animationSpeed;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        for (SlotCharacter* character in self.characters) {
-            [character setAnimationSpeed:animationSpeed];
-        }
-    });
-}
-
-- (void)setAnimationColor:(UIColor*)color
-{
-    _animationColor = color;
     for (SlotCharacter* character in self.characters) {
-        character.animationColor = color;
+        [character setAnimationSpeed:animationSpeed];
     }
 }
 
-- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment
+- (void)setAnimationColor:(UIColor*)animationColor
 {
-    _verticalAlignment = alignment;
+    _animationColor = animationColor;
     for (SlotCharacter* character in self.characters) {
-        [character setVerticalAlignment:alignment];
+        character.animationColor = animationColor;
     }
+}
+
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment
+{
+    _verticalAlignment = verticalAlignment;
+    for (SlotCharacter* character in self.characters) {
+        [character setVerticalAlignment:verticalAlignment];
+    }
+}
+
+- (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment
+{
+    _horizontalAlignment = horizontalAlignment;
 }
 
 #pragma mark - Private
