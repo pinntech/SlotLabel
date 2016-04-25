@@ -144,26 +144,15 @@
 
 - (void)setAnimationSpeed:(CGFloat)animationSpeed
 {
+    _animationSpeed = animationSpeed;
     for (SlotCharacter* character in self.characters) {
         [character setAnimationSpeed:animationSpeed];
     }
 }
 
-- (CGFloat)animationSpeed
-{
-    SlotCharacter* slotCharacter = (SlotCharacter*)[self.characters firstObject];
-    return slotCharacter.animationSpeed;
-}
-
-- (UIColor*)animationColor
-{
-    SlotCharacter* slotCharacter = (SlotCharacter*)[self.characters firstObject];
-    return slotCharacter.animationColor;
-}
-
 - (void)setAnimationColor:(UIColor*)color
 {
-    //    _animationColor = color;
+    _animationColor = color;
     for (SlotCharacter* character in self.characters) {
         character.animationColor = color;
     }
@@ -181,10 +170,12 @@
 - (void)addCharacters:(NSInteger)amount
 {
     for (int i = 0; i < amount; i++) {
-        NSLog(@"%lu", i);
-        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:CGRectMake(self.frame.size.width / amount * i, 0, self.frame.size.width / amount, self.frame.size.height)];
+        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:CGRectMake(self.frame.size.width / amount * i,
+                                                                            0,
+                                                                            self.frame.size.width / amount,
+                                                                            self.frame.size.height)];
         if (i % 2 == 0) {
-            [character setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+            [character setBackgroundColor:[UIColor lightGrayColor]];
         }
         [self addSubview:character];
         [character sizeToFit];

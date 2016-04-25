@@ -45,13 +45,26 @@ typedef NS_ENUM(NSUInteger, SLCharacterSettingValue) {
 {
     [super viewDidLoad];
 
-    [self.slotLabel animateToString:@"hello"];
+    self.slotLabel.animationSpeed = 2.5f;
+    [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
+    [self animate];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)animate
+{
+    [self.slotLabel animateToString:@"hello"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.slotLabel animateToString:@"world"];
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.slotLabel animateToString:@"fucker"];
+    });
 }
 
 - (void)tableView:(UITableView*)tableView
