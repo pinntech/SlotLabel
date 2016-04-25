@@ -22,8 +22,6 @@
 #import "SlotCharacter.h"
 #import <UIKit/UIKit.h>
 
-@protocol PNScrollLabelDataSource;
-
 IB_DESIGNABLE
 /**
  *  The label itself is made up of horizontally organized characters that can be
@@ -39,37 +37,37 @@ IB_DESIGNABLE
 @property (nonatomic, strong) NSMutableArray* characters;
 
 /**
- *  How many characters are currently being draw.
+ *  How many characters are currently being draw in the label
  */
 @property (nonatomic, assign) NSUInteger numberOfCharacters;
 
 /**
- *  The text set within the label.
+ *  The text set within the label
  */
 @property (nonatomic, strong) IBInspectable NSString* text;
 
 /**
- *  The color of the label.
+ *  The text color of the label
  */
 @property (nonatomic, strong) IBInspectable UIColor* textColor;
 
 /**
- *  The color of the label while in animation.
+ *  The color of the label while in animation
  */
 @property (nonatomic, strong) IBInspectable UIColor* animationColor;
 
 /**
- *  The shadow color of the label.
+ *  The shadow color of the label
  */
 @property (nonatomic, strong) IBInspectable UIColor* shadowColor;
 
 /**
- *  The shadow offset of the label.
+ *  The shadow offset of the label
  */
 @property (nonatomic, assign) IBInspectable CGSize shadowOffset;
 
 /**
- *  The font of the label.
+ *  The font of the label
  */
 @property (nonatomic, strong) IBInspectable UIFont* font;
 
@@ -81,9 +79,14 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGFloat animationSpeed;
 
 /**
- *  Sets the vertical alignment of the label.
+ *  The vertical alignment of the label
  */
 @property (nonatomic, assign) UIControlContentVerticalAlignment verticalAlignment;
+
+/**
+ *  The horizontal alignment of the label within its frame
+ */
+@property (nonatomic, assign) NSTextAlignment horizontalAlignment;
 
 /**
  *  Sets the label to the given string with animation.
@@ -91,19 +94,5 @@ IB_DESIGNABLE
  *  @param string Text to animate the label to
  */
 - (void)animateToString:(NSString*)string;
-
-/**
- *  Sets the label to the given number with animation
- *
- *  @param number The number to animate the label to
- */
-- (void)animateToNumber:(NSNumber*)number;
-
-/**
- *  Sets the label to the given number without animation
- *
- *  @param number The number to set the label to
- */
-- (void)setToNumber:(NSNumber*)number;
 
 @end

@@ -21,11 +21,11 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 /**
  *  This class vertically lays out UILabels in the scroll view, it manages the 
  *  logic of calculating the offset to display the ASCII character value.
  */
-IB_DESIGNABLE
 @interface SlotCharacter : UIScrollView
 
 /**

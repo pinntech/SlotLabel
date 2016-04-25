@@ -129,8 +129,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G0D-EN-LGh" firstAttribute="top" secondItem="Wh6-Ul-DdR" secondAttribute="bottom" constant="43" id="Ggf-UD-p0K"/>
+                            <constraint firstItem="G0D-EN-LGh" firstAttribute="centerY" secondItem="jE2-fD-BD9" secondAttribute="centerY" id="Lie-5G-MbE"/>
                             <constraint firstItem="G0D-EN-LGh" firstAttribute="leading" secondItem="jE2-fD-BD9" secondAttribute="leadingMargin" constant="95" id="MjU-BH-KW1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G0D-EN-LGh" secondAttribute="trailing" constant="95" id="P5O-EO-Ock"/>
+                            <constraint firstItem="G0D-EN-LGh" firstAttribute="centerX" secondItem="jE2-fD-BD9" secondAttribute="centerX" id="pzP-Mj-2X1"/>
                             <constraint firstItem="uos-Dp-HzO" firstAttribute="top" secondItem="G0D-EN-LGh" secondAttribute="bottom" constant="108" id="xIj-hj-ID1"/>
                         </constraints>
                     </view>

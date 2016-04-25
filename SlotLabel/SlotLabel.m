@@ -76,18 +76,6 @@
     });
 }
 
-- (void)animateToNumber:(NSNumber*)number
-{
-    NSString* numberString = [NSString stringWithFormat:@"%@", number];
-    [self animateToString:numberString];
-}
-
-- (void)setToNumber:(NSNumber*)number
-{
-    NSString* numberString = [NSString stringWithFormat:@"%@", number];
-    [self setText:numberString];
-}
-
 - (void)sizeToFitString:(NSString*)string
 {
     if ([string length] > [self.characters count]) {
