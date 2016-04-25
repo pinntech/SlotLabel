@@ -21,6 +21,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define SL_DEFAULT_ANIMATION_SPEED (0.5)
+
 IB_DESIGNABLE
 /**
  *  This class vertically lays out UILabels in the scroll view, it manages the 

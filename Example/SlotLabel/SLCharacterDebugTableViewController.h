@@ -24,5 +24,4 @@
 
 @interface SLCharacterDebugTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet SlotCharacter* slotCharacter;
-
 @end

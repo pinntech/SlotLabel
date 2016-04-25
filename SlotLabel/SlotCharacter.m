@@ -22,9 +22,6 @@
 #import "SLVerticallyAlignedLabel.h"
 #import "SlotCharacter.h"
 
-// Default values
-#define DEFAULT_ANIMATION_SPEED (0.5)
-
 @implementation SlotCharacter {
     // Maps the character value to an index in the ordered character set
     NSDictionary* characterMap;
@@ -71,7 +68,7 @@
     // Default label characteristics
     self.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     self.textColor = [UIColor blackColor];
-    self.shadowColor = nil;
+    self.shadowColor = [UIColor grayColor];
     self.shadowOffset = CGSizeMake(0, 0);
     self.strokeColor = [UIColor grayColor];
     self.strokeWidth = 0.0f;
@@ -79,14 +76,14 @@
     self.horizontalAlignment = NSTextAlignmentCenter;
 
     // Default animation characteristics
-    self.animationSpeed = DEFAULT_ANIMATION_SPEED;
+    self.animationSpeed = SL_DEFAULT_ANIMATION_SPEED;
     self.animationColor = nil;
 
     // Add labels and initialize the character map and animation count
     characterMap = [self characterMap];
     orderedCharacterSet = [self orderedCharacterSet];
-    [self addLabels];
     animationsCount = 0;
+    [self addLabels];
 }
 
 - (void)prepareForInterfaceBuilder

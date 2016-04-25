@@ -1,4 +1,4 @@
-// SLBasicDemoViewController.h
+// SLKeyboardTableViewController.h
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,6 +22,7 @@
 #import <SlotLabel/SlotLabel.h>
 #import <UIKit/UIKit.h>
 
-@interface SLBasicDemoViewController : UIViewController
+@interface SLKeyboardTableViewController : UITableViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet SlotLabel* slotLabel;
+@property (strong, nonatomic) IBOutlet UITextField* textField;
 @end

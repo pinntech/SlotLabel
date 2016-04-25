@@ -28,7 +28,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.characters = [[NSMutableArray alloc] init];
+        [self baseInit];
     }
     return self;
 }
@@ -37,14 +37,29 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.characters = [[NSMutableArray alloc] init];
+        [self baseInit];
     }
     return self;
 }
 
+- (void)baseInit
+{
+    self.characters = [[NSMutableArray alloc] init];
+    self.font = [UIFont systemFontOfSize:12];
+    self.textColor = [UIColor blackColor];
+    self.shadowColor = [UIColor grayColor];
+    self.shadowOffset = CGSizeMake(0, 0);
+    self.strokeColor = [UIColor grayColor];
+    self.strokeWidth = 0.0f;
+    self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
+    self.horizontalAlignment = NSTextAlignmentCenter;
+    self.animationSpeed = SL_DEFAULT_ANIMATION_SPEED;
+    self.animationColor = nil;
+}
+
 - (void)prepareForInterfaceBuilder
 {
-    //    self.backgroundColor = [UIColor blueColor];
+    [self setText:@"hello"];
 }
 
 #pragma mark - Public
@@ -65,17 +80,17 @@
 
 - (void)setText:(NSString*)string
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self sizeToFitString:string];
-        for (int i = 0; i < [string length]; i++) {
-            char character = [string characterAtIndex:i];
-            [self.characters[i] setToCharacter:character];
-        }
-        // Clears out the padding characters if any
-        for (NSUInteger i = [string length]; i < [self.characters count]; i++) {
-            [self.characters[i] setToCharacter:' '];
-        }
-    });
+    //    dispatch_async(dispatch_get_main_queue(), ^{
+    [self sizeToFitString:string];
+    for (int i = 0; i < [string length]; i++) {
+        char character = [string characterAtIndex:i];
+        [self.characters[i] setToCharacter:character];
+    }
+    // Clears out the padding characters if any
+    for (NSUInteger i = [string length]; i < [self.characters count]; i++) {
+        [self.characters[i] setToCharacter:' '];
+    }
+    //    });
 }
 
 - (void)sizeToFitString:(NSString*)string
@@ -142,12 +157,30 @@
     }
 }
 
+- (void)setStrokeColor:(UIColor*)color
+{
+    _strokeColor = color;
+    for (SlotCharacter* character in self.characters) {
+        [character setStrokeColor:color];
+    }
+}
+
+- (void)setStrokeWidth:(CGFloat)strokeWidth
+{
+    _strokeWidth = strokeWidth;
+    for (SlotCharacter* character in self.characters) {
+        [character setStrokeWidth:strokeWidth];
+    }
+}
+
 - (void)setAnimationSpeed:(CGFloat)animationSpeed
 {
     _animationSpeed = animationSpeed;
-    for (SlotCharacter* character in self.characters) {
-        [character setAnimationSpeed:animationSpeed];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (SlotCharacter* character in self.characters) {
+            [character setAnimationSpeed:animationSpeed];
+        }
+    });
 }
 
 - (void)setAnimationColor:(UIColor*)color
@@ -177,16 +210,25 @@
         if (i % 2 == 0) {
             [character setBackgroundColor:[UIColor lightGrayColor]];
         }
-        [self addSubview:character];
         [character sizeToFit];
+        [self skinCharacter:character];
         [character setToCharacter:' '];
         [self.characters addObject:character];
+        [self addSubview:character];
     }
 }
 
 - (void)skinCharacter:(SlotCharacter*)character
 {
+    [character setFont:self.font];
     [character setTextColor:self.textColor];
+    [character setShadowColor:self.shadowColor];
+    [character setShadowOffset:self.shadowOffset];
+    [character setStrokeColor:self.strokeColor];
+    [character setStrokeWidth:self.strokeWidth];
+    [character setAnimationColor:self.animationColor];
+    [character setAnimationSpeed:self.animationSpeed];
+    [character setVerticalAlignment:self.verticalAlignment];
 }
 
 @end

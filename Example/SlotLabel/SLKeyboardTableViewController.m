@@ -1,4 +1,4 @@
-// SLBasicDemoViewController.h
+// SLKeyboardTableViewController.m
 // Copyright (c) 2016 Pinn Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,9 +19,38 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <SlotLabel/SlotLabel.h>
-#import <UIKit/UIKit.h>
+#import "SLKeyboardTableViewController.h"
 
-@interface SLBasicDemoViewController : UIViewController
-@property (weak, nonatomic) IBOutlet SlotLabel* slotLabel;
+@interface SLKeyboardTableViewController ()
+
+@end
+
+@implementation SLKeyboardTableViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.textField.delegate = self;
+    [self.textField becomeFirstResponder];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string
+{
+    NSString* text = [NSString stringWithFormat:@"%@%@", textField.text, string];
+    if ([string isEqualToString:@""]) {
+        if (text.length > 0) {
+            text = [text substringToIndex:[text length] - 1];
+        }
+    }
+    [self.slotLabel animateToString:text];
+    return YES;
+}
+
 @end

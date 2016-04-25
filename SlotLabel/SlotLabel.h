@@ -47,14 +47,14 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable NSString* text;
 
 /**
+ *  The font of the label
+ */
+@property (nonatomic, strong) IBInspectable UIFont* font;
+
+/**
  *  The text color of the label
  */
 @property (nonatomic, strong) IBInspectable UIColor* textColor;
-
-/**
- *  The color of the label while in animation
- */
-@property (nonatomic, strong) IBInspectable UIColor* animationColor;
 
 /**
  *  The shadow color of the label
@@ -67,9 +67,19 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable CGSize shadowOffset;
 
 /**
- *  The font of the label
+ *  The stroke color of the label
  */
-@property (nonatomic, strong) IBInspectable UIFont* font;
+@property (nonatomic, strong) IBInspectable UIColor* strokeColor;
+
+/**
+ *  The width of the stroke on the label
+ */
+@property (nonatomic, assign) IBInspectable CGFloat strokeWidth;
+
+/**
+ *  The color of the label while in animation
+ */
+@property (nonatomic, strong) IBInspectable UIColor* animationColor;
 
 /**
  *  The speed of the animation, which is the time in seconds the label will 

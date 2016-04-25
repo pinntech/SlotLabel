@@ -11,6 +11,7 @@
 		274A532D1CC6155100BA5E46 /* SLBasicDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274A532C1CC6155100BA5E46 /* SLBasicDemoViewController.m */; };
 		2772D98B1CC7068F00347C6B /* SLCharacterDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772D98A1CC7068F00347C6B /* SLCharacterDebugTableViewController.m */; };
 		2772D98D1CC8944A00347C6B /* SlotCharacterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772D98C1CC8944A00347C6B /* SlotCharacterTests.m */; };
+		277978CB1CCEBA2200311CD9 /* SLKeyboardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 277978CA1CCEBA2200311CD9 /* SLKeyboardTableViewController.m */; };
 		27B968291CCABD41000A92C1 /* SLLabelDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B968281CCABD41000A92C1 /* SLLabelDebugTableViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -50,6 +51,8 @@
 		2772D9891CC7068F00347C6B /* SLCharacterDebugTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLCharacterDebugTableViewController.h; sourceTree = "<group>"; };
 		2772D98A1CC7068F00347C6B /* SLCharacterDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLCharacterDebugTableViewController.m; sourceTree = "<group>"; };
 		2772D98C1CC8944A00347C6B /* SlotCharacterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotCharacterTests.m; sourceTree = "<group>"; };
+		277978C91CCEBA2200311CD9 /* SLKeyboardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKeyboardTableViewController.h; sourceTree = "<group>"; };
+		277978CA1CCEBA2200311CD9 /* SLKeyboardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKeyboardTableViewController.m; sourceTree = "<group>"; };
 		27B968271CCABD41000A92C1 /* SLLabelDebugTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLLabelDebugTableViewController.h; sourceTree = "<group>"; };
 		27B968281CCABD41000A92C1 /* SLLabelDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLLabelDebugTableViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SlotLabel_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotLabel_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +164,8 @@
 				2772D98A1CC7068F00347C6B /* SLCharacterDebugTableViewController.m */,
 				27B968271CCABD41000A92C1 /* SLLabelDebugTableViewController.h */,
 				27B968281CCABD41000A92C1 /* SLLabelDebugTableViewController.m */,
+				277978C91CCEBA2200311CD9 /* SLKeyboardTableViewController.h */,
+				277978CA1CCEBA2200311CD9 /* SLKeyboardTableViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -410,6 +415,7 @@
 				6003F59E195388D20070C39A /* SLAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				27B968291CCABD41000A92C1 /* SLLabelDebugTableViewController.m in Sources */,
+				277978CB1CCEBA2200311CD9 /* SLKeyboardTableViewController.m in Sources */,
 				274A532D1CC6155100BA5E46 /* SLBasicDemoViewController.m in Sources */,
 				2772D98B1CC7068F00347C6B /* SLCharacterDebugTableViewController.m in Sources */,
 			);
