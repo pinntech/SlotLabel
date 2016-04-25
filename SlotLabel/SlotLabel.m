@@ -52,7 +52,7 @@
     self.strokeColor = [UIColor grayColor];
     self.strokeWidth = 0.0f;
     self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
-    self.horizontalAlignment = NSTextAlignmentCenter;
+    self.horizontalAlignment = NSTextAlignmentRight;
     self.animationSpeed = SL_DEFAULT_ANIMATION_SPEED;
     self.animationColor = nil;
 }
@@ -80,7 +80,6 @@
 
 - (void)setText:(NSString*)string
 {
-    //    dispatch_async(dispatch_get_main_queue(), ^{
     [self sizeToFitString:string];
     for (int i = 0; i < [string length]; i++) {
         char character = [string characterAtIndex:i];
@@ -90,14 +89,17 @@
     for (NSUInteger i = [string length]; i < [self.characters count]; i++) {
         [self.characters[i] setToCharacter:' '];
     }
-    //    });
 }
 
 - (void)sizeToFitString:(NSString*)string
 {
+    // Draw additional SlotCharacters so we can fit the string
     if ([string length] > [self.characters count]) {
         [self removeAllCharacters];
         [self addCharacters:[string length]];
+    }
+    // Delete additional extraneous SlotCharacters
+    else if ([string length] < [self.characters count]) {
     }
 }
 
@@ -107,17 +109,6 @@
         [character removeFromSuperview];
     }
     [self.characters removeAllObjects];
-}
-
-- (void)setNumberOfCharacters:(NSUInteger)amount
-{
-    // If the amount being set is already the amount then do nothing
-    if (amount == self.numberOfCharacters) {
-        return;
-    }
-
-    [self removeAllCharacters];
-    [self addCharacters:amount];
 }
 
 - (NSUInteger)numberOfCharacters
@@ -203,13 +194,45 @@
 }
 
 #pragma mark - Private
+- (void)addCharacter
+{
+    CGFloat xOrigin = 0;
+    if (self.characters.count > 0) {
+        SlotCharacter* lastCharacter = [self.characters lastObject];
+        xOrigin = lastCharacter.frame.origin.x;
+    }
+    NSLog(@"%lu", (long)self.characters.count);
+    NSLog(@"x origin: %f", xOrigin);
+
+    // Determine label intrinsic size
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    label.font = self.font;
+    label.text = @"W";
+
+    CGRect frame = CGRectMake(label.intrinsicContentSize.width * self.characters.count, 0, label.intrinsicContentSize.width, self.frame.size.height);
+    SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:frame];
+    [character sizeToFit];
+    [self skinCharacter:character];
+    [character setToCharacter:' '];
+    [self.characters addObject:character];
+    [self addSubview:character];
+}
+
 - (void)addCharacters:(NSInteger)amount
 {
     for (int i = 0; i < amount; i++) {
-        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:CGRectMake(self.frame.size.width / amount * i,
-                                                                            0,
-                                                                            self.frame.size.width / amount,
-                                                                            self.frame.size.height)];
+        //        [self addCharacter];
+        if (self.characters.count > 0) {
+            SlotCharacter* lastCharacter = [self.characters lastObject];
+            NSLog(@"%f", lastCharacter.frame.origin.x);
+        }
+        // Determine label intrinsic size
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+        label.font = self.font;
+        label.text = @"W";
+
+        CGRect frame = CGRectMake(label.intrinsicContentSize.width * i, 0, label.intrinsicContentSize.width, self.frame.size.height);
+        SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:frame];
         if (i % 2 == 0) {
             [character setBackgroundColor:[UIColor lightGrayColor]];
         }

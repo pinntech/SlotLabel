@@ -45,6 +45,7 @@ typedef NS_ENUM(NSUInteger, SLCharacterSettingValue) {
     [super viewDidLoad];
 
     [self.slotLabel setAnimationSpeed:2.0f];
+    [self.slotLabel setFont:[UIFont systemFontOfSize:20]];
     [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(animate) userInfo:nil repeats:YES];
     [self animate];
 }

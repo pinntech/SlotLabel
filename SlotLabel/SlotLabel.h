@@ -37,11 +37,6 @@ IB_DESIGNABLE
 @property (nonatomic, strong) NSMutableArray* characters;
 
 /**
- *  How many characters are currently being draw in the label
- */
-@property (nonatomic, assign) NSUInteger numberOfCharacters;
-
-/**
  *  The text set within the label
  */
 @property (nonatomic, strong) IBInspectable NSString* text;

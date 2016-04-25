@@ -33,7 +33,6 @@
                                    selector:@selector(animate)
                                    userInfo:nil
                                     repeats:YES];
-    [self.slotLabel setNumberOfCharacters:14];
     // Do this stuff after the character amount is set
     self.slotLabel.animationSpeed = 3.0f;
     [self.slotLabel setFont:[UIFont fontWithName:@"Courier" size:35]];

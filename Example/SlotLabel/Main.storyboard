@@ -152,14 +152,14 @@
                         <sections>
                             <tableViewSection id="nq2-LX-ueD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="cdn-ZK-pTP">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="cdn-ZK-pTP">
                                         <rect key="frame" x="0.0" y="99" width="568" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdn-ZK-pTP" id="egn-DH-6sY">
-                                            <rect key="frame" x="0.0" y="0.0" width="568" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="568" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-iS-7FN" customClass="SlotLabel">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-iS-7FN" customClass="SlotLabel">
                                                     <rect key="frame" x="8" y="8" width="552" height="60"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -508,7 +508,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="568" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-FS-eX5" customClass="SlotLabel">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-FS-eX5" customClass="SlotLabel">
                                                     <rect key="frame" x="8" y="8" width="552" height="49"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
