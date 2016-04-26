@@ -79,15 +79,15 @@ Heres a quick run down of all configurable properties and methods
 ###### Properties
 ```objc
 - (void)setFont:(UIFont*)font;
-- (void)setTextColor:(UIColor*)color;
-- (void)setShadowColor:(UIColor*)color;
-- (void)setShadowOffset:(CGSize)size;
-- (void)setStrokeColor:(UIColor*)color;
-- (void)setStrokeWidth:(CGFloat)width;
+- (void)setTextColor:(UIColor*)textColor;
+- (void)setShadowColor:(UIColor*)shadowColor;
+- (void)setShadowOffset:(CGSize)shadowOffset;
+- (void)setStrokeColor:(UIColor*)strokeColor;
+- (void)setStrokeWidth:(CGFloat)strokeWidth;
 - (void)setAnimationSpeed:(CGFloat)animationSpeed;
-- (void)setAnimationColor:(UIColor*)color;
-- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)alignment;
-- (void)setHorizontalAlignment:(NSTextAlignment)alignment;
+- (void)setAnimationColor:(UIColor*)animationColor;
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment;
+- (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment;
 ```
 
 ###### Methods
@@ -107,10 +107,22 @@ Heres a quick run down of all configurable properties and methods
 
 ###### Properties
 ```objc
+- (void)setFont:(UIFont*)font;
+- (void)setTextColor:(UIColor*)textColor;
+- (void)setShadowColor:(UIColor*)shadowColor;
+- (void)setShadowOffset:(CGSize)shadowOffset;
+- (void)setStrokeColor:(UIColor*)strokeColor;
+- (void)setStrokeWidth:(CGFloat)strokeWidth;
+- (void)setAnimationSpeed:(CGFloat)animationSpeed;
+- (void)setAnimationColor:(UIColor*)animationColor;
+- (void)setVerticalAlignment:(UIControlContentVerticalAlignment)verticalAlignment;
+- (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment;
 ```
 
 ###### Methods
 ```objc
+- (void)setText:(NSString*)text;
+- (void)animateToString:(NSString*)string;
 ```
 
 ### Usage
