@@ -192,7 +192,7 @@
     [self setLabelsHorizontalAlignment:horizontalAlignment];
 }
 
-#pragma mark - Private Methods
+#pragma mark - Private
 - (NSDictionary*)characterMap
 {
     return @{

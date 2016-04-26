@@ -91,31 +91,6 @@
     }
 }
 
-- (void)sizeToFitString:(NSString*)string
-{
-    // Draw additional SlotCharacters so we can fit the string
-    if ([string length] > [self.characters count]) {
-        [self removeAllCharacters];
-        [self addCharacters:[string length]];
-    }
-    // Delete additional extraneous SlotCharacters
-    else if ([string length] < [self.characters count]) {
-    }
-}
-
-- (void)removeAllCharacters
-{
-    for (SlotCharacter* character in self.characters) {
-        [character removeFromSuperview];
-    }
-    [self.characters removeAllObjects];
-}
-
-- (NSUInteger)numberOfCharacters
-{
-    return self.characters.count;
-}
-
 - (void)setFont:(UIFont*)font
 {
     _font = font;
@@ -194,6 +169,31 @@
 }
 
 #pragma mark - Private
+- (void)sizeToFitString:(NSString*)string
+{
+    // Draw additional SlotCharacters so we can fit the string
+    if ([string length] > [self.characters count]) {
+        [self removeAllCharacters];
+        [self addCharacters:[string length]];
+    }
+    // Delete additional extraneous SlotCharacters
+    else if ([string length] < [self.characters count]) {
+    }
+}
+
+- (void)removeAllCharacters
+{
+    for (SlotCharacter* character in self.characters) {
+        [character removeFromSuperview];
+    }
+    [self.characters removeAllObjects];
+}
+
+- (NSUInteger)numberOfCharacters
+{
+    return self.characters.count;
+}
+
 - (void)addCharacter
 {
     CGFloat xOrigin = 0;
@@ -242,6 +242,24 @@
         [self.characters addObject:character];
         [self addSubview:character];
     }
+}
+
+- (void)drawCharacters:(NSUInteger)amount
+{
+    if (self.horizontalAlignment == NSTextAlignmentLeft) {
+    }
+    else if (self.horizontalAlignment == NSTextAlignmentCenter) {
+    }
+    else if (self.horizontalAlignment == NSTextAlignmentRight) {
+    }
+}
+
+- (CGSize)intrinsicCharacterSize
+{
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    label.font = self.font;
+    label.text = @"W";
+    return label.intrinsicContentSize;
 }
 
 - (void)skinCharacter:(SlotCharacter*)character
