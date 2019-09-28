@@ -88,11 +88,6 @@ IB_DESIGNABLE
 @property (nonatomic, assign) UIControlContentVerticalAlignment verticalAlignment;
 
 /**
- *  Sets the horizontal alignment of the labels within the superview frame
- */
-@property (nonatomic, assign) NSTextAlignment horizontalAlignment;
-
-/**
  *  Animates the label to a specific ASCII character.
  *
  *  @param character An ASCII character to animate to

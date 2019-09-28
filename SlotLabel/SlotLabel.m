@@ -52,7 +52,7 @@
     self.strokeColor = [UIColor grayColor];
     self.strokeWidth = 0.0f;
     self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
-    self.horizontalAlignment = NSTextAlignmentRight;
+    self.horizontalAlignment = NSTextAlignmentLeft;
     self.animationSpeed = SL_DEFAULT_ANIMATION_SPEED;
     self.animationColor = nil;
 }
@@ -105,6 +105,16 @@
     for (SlotCharacter* character in self.characters) {
         [character setTextColor:textColor];
     }
+}
+
+- (void)setSlotBackgroundColor:(UIColor *)slotBackgroundColor
+{
+    _slotBackgroundColor = slotBackgroundColor;
+    [self.characters enumerateObjectsUsingBlock:^(SlotCharacter* _Nonnull character, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (idx % 2 == 0) {
+            [character setBackgroundColor:slotBackgroundColor];
+        }
+    }];
 }
 
 - (void)setShadowColor:(UIColor*)shadowColor
@@ -166,6 +176,23 @@
 - (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment
 {
     _horizontalAlignment = horizontalAlignment;
+    NSUInteger amount = [self.characters count];
+    if (amount == 0) {
+        return;
+    }
+    SlotCharacter* firstCharacter = [self.characters firstObject];
+    CGFloat width = firstCharacter.bounds.size.width;
+    CGFloat originX = 0;
+    if (self.horizontalAlignment == NSTextAlignmentCenter) {
+        originX = (self.bounds.size.width - (width * amount)) / 2;
+    } else if (self.horizontalAlignment == NSTextAlignmentRight) {
+        originX = self.bounds.size.width - (width * amount);
+    }
+    [self.characters enumerateObjectsUsingBlock:^(SlotCharacter* _Nonnull character, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGRect frame = character.frame;
+        frame.origin.x = frame.size.width * idx + originX;
+        character.frame = frame;
+    }];
 }
 
 #pragma mark - Private
@@ -194,34 +221,9 @@
     return self.characters.count;
 }
 
-- (void)addCharacter
-{
-    CGFloat xOrigin = 0;
-    if (self.characters.count > 0) {
-        SlotCharacter* lastCharacter = [self.characters lastObject];
-        xOrigin = lastCharacter.frame.origin.x;
-    }
-    NSLog(@"%lu", (long)self.characters.count);
-    NSLog(@"x origin: %f", xOrigin);
-
-    // Determine label intrinsic size
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    label.font = self.font;
-    label.text = @"W";
-
-    CGRect frame = CGRectMake(label.intrinsicContentSize.width * self.characters.count, 0, label.intrinsicContentSize.width, self.frame.size.height);
-    SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:frame];
-    [character sizeToFit];
-    [self skinCharacter:character];
-    [character setToCharacter:' '];
-    [self.characters addObject:character];
-    [self addSubview:character];
-}
-
 - (void)addCharacters:(NSInteger)amount
 {
     for (int i = 0; i < amount; i++) {
-        //        [self addCharacter];
         if (self.characters.count > 0) {
             SlotCharacter* lastCharacter = [self.characters lastObject];
             NSLog(@"%f", lastCharacter.frame.origin.x);
@@ -230,28 +232,17 @@
         UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         label.font = self.font;
         label.text = @"W";
-
-        CGRect frame = CGRectMake(label.intrinsicContentSize.width * i, 0, label.intrinsicContentSize.width, self.frame.size.height);
+        CGFloat width = label.intrinsicContentSize.width - self.offsetWidth;
+        CGRect frame = CGRectMake(width * i, 0, width, self.frame.size.height);
         SlotCharacter* character = [[SlotCharacter alloc] initWithFrame:frame];
-        if (i % 2 == 0) {
-            [character setBackgroundColor:[UIColor lightGrayColor]];
-        }
         [character sizeToFit];
         [self skinCharacter:character];
         [character setToCharacter:' '];
         [self.characters addObject:character];
         [self addSubview:character];
     }
-}
-
-- (void)drawCharacters:(NSUInteger)amount
-{
-    if (self.horizontalAlignment == NSTextAlignmentLeft) {
-    }
-    else if (self.horizontalAlignment == NSTextAlignmentCenter) {
-    }
-    else if (self.horizontalAlignment == NSTextAlignmentRight) {
-    }
+    [self setSlotBackgroundColor:self.slotBackgroundColor];
+    [self setHorizontalAlignment:self.horizontalAlignment];
 }
 
 - (CGSize)intrinsicCharacterSize

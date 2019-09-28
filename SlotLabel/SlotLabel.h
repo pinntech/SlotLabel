@@ -47,9 +47,19 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIFont* font;
 
 /**
+*  The offset width of the label
+*/
+@property (nonatomic, assign) IBInspectable CGFloat offsetWidth;
+
+/**
  *  The text color of the label
  */
 @property (nonatomic, strong) IBInspectable UIColor* textColor;
+
+/**
+*  The text color of the slot background
+*/
+@property (nonatomic, strong) IBInspectable UIColor* slotBackgroundColor;
 
 /**
  *  The shadow color of the label
