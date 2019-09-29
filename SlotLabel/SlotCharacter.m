@@ -73,7 +73,6 @@
     self.strokeColor = [UIColor grayColor];
     self.strokeWidth = 0.0f;
     self.verticalAlignment = UIControlContentVerticalAlignmentBottom;
-    self.horizontalAlignment = NSTextAlignmentCenter;
 
     // Default animation characteristics
     self.animationSpeed = SL_DEFAULT_ANIMATION_SPEED;
@@ -183,13 +182,6 @@
 {
     _verticalAlignment = verticalAlignment;
     [self setLabelsVerticalAlignment:verticalAlignment];
-}
-
-#pragma mark - Horizontal Alignment
-- (void)setHorizontalAlignment:(NSTextAlignment)horizontalAlignment
-{
-    _horizontalAlignment = horizontalAlignment;
-    [self setLabelsHorizontalAlignment:horizontalAlignment];
 }
 
 #pragma mark - Private
@@ -443,7 +435,7 @@
         label.attributedText = [[NSAttributedString alloc] initWithString:orderedCharacterSet[i]
                                                                attributes:textAttributes];
         [label setVerticalAlignment:self.verticalAlignment];
-        [label setTextAlignment:self.horizontalAlignment];
+        [label setTextAlignment:NSTextAlignmentCenter];
         label.textColor = self.textColor;
         // Add to subview as well as labels array
         [self addSubview:label];
@@ -663,18 +655,6 @@
             if ([subView isKindOfClass:[UILabel class]]) {
                 SLVerticallyAlignedLabel* label = (SLVerticallyAlignedLabel*)subView;
                 [label setVerticalAlignment:alignment];
-            }
-        }
-    });
-}
-
-- (void)setLabelsHorizontalAlignment:(NSTextAlignment)alignment
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        for (UIView* subView in self.subviews) {
-            if ([subView isKindOfClass:[UILabel class]]) {
-                UILabel* label = (UILabel*)subView;
-                [label setTextAlignment:alignment];
             }
         }
     });
